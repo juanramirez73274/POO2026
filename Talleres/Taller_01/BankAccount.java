@@ -41,10 +41,12 @@ public class BankAccount {
     public int getBalance(){
         return balance;
     }
-    public void setAccountHolder(String accountHolder){
+    public boolean setAccountHolder(String accountHolder){
         if(isValidAccountHolder(accountHolder)){
             this.accountHolder=accountHolder;
+            return true;
         }
+        return false;
     }
 
     public boolean isValidAccountHolder(String accountHolder){

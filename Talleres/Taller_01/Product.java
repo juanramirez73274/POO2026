@@ -17,38 +17,38 @@ public Product(String name, int price, int stock){
     this.price = price;
     this.stock = stock;
 }
+
 public String getname(){
     return name;
 }
-public void setname(String name){
+public int getprice(){
+    return price;
+}
+public int stocl(){
+    return stock;
+}
+
+public boolean setname(String name){
     if(isValidName(name)){
         this.name = name;
+        return true;
     }
-    else{
-        System.out.println("error se conserva el nombre: " + this.name);
-    }
+    return false;
 }
-public void setprice(int price){
+public boolean setprice(int price){
     if(isValidPrice(price)){
         this.price = price;
+        return true;
     }
-    else{
-        System.out.println("se conserva el precio: " + this.price);
-    }
+    return false;
 }
-public void setstock(int stock){
+public boolean setstock(int stock){
     if(isValidStock(stock)){
         this.stock = stock;
+        return true;
     }
-    else{
-        System.out.println("se conserva la cantidad del producto: " + this.stock);
-    }
+    return false;
 }
-
-
-
-
-
 
 public boolean isValidName(String name){
     return name != null && !name.trim().isEmpty();

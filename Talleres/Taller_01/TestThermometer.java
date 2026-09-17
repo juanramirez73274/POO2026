@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class TestThermometer {
     public static void main(String[] args) {
 
@@ -21,9 +23,9 @@ public class TestThermometer {
         boolean fueExitoso = t.setTemperature(nuevaTemp);
 
         if (fueExitoso) {
-            System.out.println("-> Resultado: CAMBIO ACEPTADO");
+            JOptionPane.showMessageDialog(null, "-> Resultado: CAMBIO ACEPTADO");
         } else {
-            System.out.println("-> Resultado: CAMBIO RECHAZADO (Valor fuera del rango [-50, 100])");
+            JOptionPane.showMessageDialog(null, "-> Resultado: CAMBIO RECHAZADO (Valor fuera del rango [-50, 100])");
         }
         
         System.out.println("Temperatura actual en pantalla: " + t.getTemperature() + " °C");

@@ -1,7 +1,7 @@
 public class TestBankAccount {
     public static void main(String[] args) {
 
-        BankAccount account = new BankAccount("Ana María Gómez", 1001, 500);
+        BankAccount account = new BankAccount("Rafiña", 1001, 500);
         System.out.println("Cuenta: #" + account.getAccountNumber() + " | Titular: " + account.getAccountHolder() + " | Saldo Inicial: $" + account.getBalance());
 
         System.out.println("\n--- Pruebas de Depósito ---");
@@ -19,5 +19,9 @@ public class TestBankAccount {
         System.out.println("\n--- Estado Final ---");
         System.out.println("Titular: " + account.getAccountHolder());
         System.out.println("Saldo final conservado correctamente: $" + account.getBalance());
+        
     }
 }
+
+
+

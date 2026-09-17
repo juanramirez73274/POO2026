@@ -16,7 +16,6 @@ public class BankAccount {
 
     public boolean deposit(int amount){
         if(amount<=0){
-            System.out.println("el monto de deposito debe ser mayor que 0"); 
             return false; 
         }
         this.balance += amount;
@@ -24,7 +23,6 @@ public class BankAccount {
     }
     public boolean withdrawals(int amount){
         if(amount<=0 || amount>balance){
-            System.out.println("no se puede hacer el retiro de la cuenta. Porque excede el saldo o porque el monto a retirar es menor o igual a 0");
             return false;
         }
         this.balance -= amount;
@@ -53,8 +51,8 @@ public class BankAccount {
         return accountHolder != null && !accountHolder.trim().isEmpty();
     }
 }
-//Una aplicación bancaria necesita representar una cuenta de la cual se conoce el número de cuenta (account number), 
-//el nombre de su titular (account holder) y el saldo disponible (balance).
+//Una aplicación bancaria necesita representar una cuenta de la cual se conoce el número de cuenta account number), 
+//el nombre de su titular account holder) y el saldo disponible (balance.
 //El número de cuenta identifica la cuenta y no debe cambiar una vez establecido.
 //El saldo no puede modificarse arbitrariamente. Únicamente puede aumentar mediante depósitos (deposits) y disminuir mediante
 //retiros (withdrawals).
